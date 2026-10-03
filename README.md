@@ -3,7 +3,9 @@
 A deep learning system that classifies chest X-ray images into 15 thoracic disease categories. Built as a capstone project for NCPS730 at Sol Plaatje University.
 
 **Author:** Katlego Mashala (202470697)
+
 **Supervisor:** Mrs Nthabiseng Modiba
+
 **Year:** 2026
 
 ---
