@@ -61,7 +61,7 @@ This project uses the NIH ChestX-ray14 dataset. The dataset is not included in t
 
 To set up the data:
 1. Download the dataset from the official NIH source:
-[PASTE NIH CHESTX-RAY14 DATASET LINK HERE]
+https://nihcc.app.box.com/v/ChestXray-NIHCC
 
 2. Extract the image folders and place them inside the data/ folder.
 
@@ -102,15 +102,17 @@ Open src/train.ipynb on a machine with a dedicated GPU. This notebook was used f
 Both notebooks assume the dataset is already available on disk. Update the dataset_path variable at the top of the notebook if your paths differ.
 
 ## Model Summary
-Item	Value
-Architecture	ResNet50 (pre-trained on ImageNet) + custom classification head
-Input size	224 × 224 × 3
-Output classes	15 (14 diseases + Normal)
-Loss function	Custom Weighted Binary Cross-Entropy
-Optimiser	Adam (learning rate 2e-6)
-Best validation AUC	0.8843
-Training images	15,000
-Train/test split	80 / 20
+
+| Item | Value |
+|------|-------|
+| Architecture | ResNet50 (pre-trained on ImageNet) + custom classification head |
+| Input size | 224 × 224 × 3 |
+| Output classes | 15 (14 diseases + Normal) |
+| Loss function | Custom Weighted Binary Cross-Entropy |
+| Optimiser | Adam (learning rate 2e-6) |
+| Best validation AUC | 0.8843 |
+| Training images | 15,000 |
+| Train/test split | 80 / 20 |
 
 
 ## Diseases Detected
