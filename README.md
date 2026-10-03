@@ -52,7 +52,7 @@ Main libraries used:
 * Matplotlib
 * Seaborn
 * Streamlit
-
+```
 Dataset Setup
 This project uses the NIH ChestX-ray14 dataset. The dataset is not included in this repository because of its size (approximately 45 GB).
 
