@@ -19,6 +19,7 @@ The trained model is deployed as a Streamlit web application that allows users t
 ---
 
 ## Repository Structure
+```bash
 ChestXray_System/
 ├── data/ # Chest X-ray images (not committed — see below)
 ├── models/
@@ -30,7 +31,7 @@ ChestXray_System/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
-
+```
 ---
 
 ## Requirements
@@ -53,11 +54,10 @@ Main libraries used:
 * Seaborn
 * Streamlit
 ```
-Dataset Setup
+## Dataset Setup
 This project uses the NIH ChestX-ray14 dataset. The dataset is not included in this repository because of its size (approximately 45 GB).
 
 To set up the data:
-
 1. Download the dataset from the official NIH source:
 [PASTE NIH CHESTX-RAY14 DATASET LINK HERE]
 
@@ -66,14 +66,14 @@ To set up the data:
 3. Download the metadata file Data_Entry_2017_v2020.csv and place it in the src/ folder.
 
 The dataset should look like this after extraction:
-
+```bash
 data/
 ├── images_001/
 ├── images_002/
 ├── images_003/
 └── ...
-
-Running the Streamlit Application
+```
+## Running the Streamlit Application
 To launch the web application:
 streamlit run models/app.py
 
@@ -87,7 +87,7 @@ The application allows you to:
 
 The app runs on CPU by default and does not require a GPU.
 
-Running the Training Notebooks
+## Running the Training Notebooks
 
 To retrain the model from scratch:
 
@@ -99,7 +99,7 @@ Open src/train.ipynb on a machine with a dedicated GPU. This notebook was used f
 
 Both notebooks assume the dataset is already available on disk. Update the dataset_path variable at the top of the notebook if your paths differ.
 
-Model Summary
+## Model Summary
 Item	Value
 Architecture	ResNet50 (pre-trained on ImageNet) + custom classification head
 Input size	224 × 224 × 3
@@ -111,7 +111,7 @@ Training images	15,000
 Train/test split	80 / 20
 
 
-Diseases Detected
+## Diseases Detected
 The model predicts one probability for each of the following 15 categories:
 1. Atelectasis
 2. Cardiomegaly
@@ -129,10 +129,10 @@ The model predicts one probability for each of the following 15 categories:
 14. Hernia
 15. Normal
 
-Notes
+## Notes
 * This project is a proof-of-concept prototype developed for academic purposes. It is not intended for clinical deployment and must not replace professional medical diagnosis.
 * The model requires further validation before it can be considered for use in a real healthcare setting.
 * The full implementation details, methodology, and results are documented in the capstone project report.
 
-License
+## License
 This project is submitted as part of the NCPS730 capstone module at Sol Plaatje University. All rights reserved by the author.
